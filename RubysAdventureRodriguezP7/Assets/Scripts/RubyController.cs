@@ -22,7 +22,7 @@ public class RubyController : MonoBehaviour
     float vertical;
 
     Animator animator;
-    Vector2 lookDirection = new Vector2(1, 0);
+    Vector2 lookDirection = new Vector2(1,0);
 
     // Start is called before the first frame update
     void Start()
@@ -68,8 +68,8 @@ public class RubyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 positon = rigidbody2d.position;
-        positon.x = positon.x + 3.0f * horizontal * Time.deltaTime;
-        positon.y = positon.y + 3.0f * vertical * Time.deltaTime; ;
+        positon.x = positon.x + speed * horizontal * Time.deltaTime;
+        positon.y = positon.y + speed * vertical * Time.deltaTime; ;
 
         rigidbody2d.MovePosition(positon);
     }
